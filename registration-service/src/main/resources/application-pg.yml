@@ -1,0 +1,31 @@
+spring:
+  datasource:
+  url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:registration_db}
+  username: ${POSTGRES_USER:vrms}
+  password: ${POSTGRES_PASSWORD:vrms}
+
+
+  jpa:
+  database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+  spring:
+    profiles:
+      active: pg
+
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/vrms_db
+#    username: vrms
+#    password: vrms
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#
+#  flyway:
+#    enabled: true
+
+
+
