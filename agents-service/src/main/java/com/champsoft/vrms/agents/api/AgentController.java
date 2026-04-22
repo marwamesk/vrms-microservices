@@ -42,12 +42,12 @@ public class AgentController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@PathVariable String id, UpdateAgentRequest req){
+    public ResponseEntity<?> update(@PathVariable String id, @RequestBody UpdateAgentRequest req){
         var v = service.update(id, req.name(), req.role());
         return ResponseEntity.ok(AgentApiMapper.toResponse(v));
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("/{id}/activate")
     public ResponseEntity<?> activate(@PathVariable String id){
         var v = service.activate(id);
         return ResponseEntity.ok(AgentApiMapper.toResponse(v));
