@@ -1,17 +1,11 @@
 spring:
   datasource:
-  url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:owners_db}
-  username: ${POSTGRES_USER:vrms}
-  password: ${POSTGRES_PASSWORD:vrms}
-
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:registration_db}
+    username: ${POSTGRES_USER:vrms}
+    password: ${POSTGRES_PASSWORD:vrms}
 
   jpa:
-  database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-
-  spring:
-    profiles:
-      active: pg
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 
 

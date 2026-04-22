@@ -16,7 +16,3 @@ spring:
         settings:
           web-allow-others: true
 
-  spring:
-    h2:
-      console:
-        enabled=true:
